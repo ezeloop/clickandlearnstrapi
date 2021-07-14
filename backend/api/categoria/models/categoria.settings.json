@@ -1,24 +1,33 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "categorias",
   "info": {
-    "name": "category",
+    "name": "categoria",
     "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "slug": {
       "type": "uid",
       "targetField": "name",
       "required": true
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "detail": {
+      "type": "text"
+    },
+    "cover": {
+      "type": "string"
     }
   }
 }
